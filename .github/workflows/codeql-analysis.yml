@@ -17,8 +17,6 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "master" ]
-  schedule:
-    - cron: '29 14 * * 5'
 
 jobs:
   analyze:
@@ -32,9 +30,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-       cybernoble410-patch-1
-        language: ['python']
-
+        language: [ 'csharp' ]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Use only 'java' to analyze code written in Java, Kotlin or both
         # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
