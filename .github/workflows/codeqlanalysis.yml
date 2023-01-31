@@ -19,19 +19,20 @@ on:
     branches: [ "master" ]
   schedule:
     - cron: '29 14 * * 5'
+    
 jobs:
   analyze:
     permissions:
       security-events: write
       actions: read
-    ...
+    
     strategy:
       fail-fast: false
       matrix:
-        language: ['csharp', 'cpp', 'javascript']
+        language: [cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby']
 
     steps:
-    ...
+    
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
