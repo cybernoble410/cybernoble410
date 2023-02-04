@@ -30,13 +30,11 @@ jobs:
       security-events: write
 
     strategy:
-      fail-fast: false
-      matrix:
-        language: ['java']
-        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
-        # Use only 'java' to analyze code written in Java, Kotlin or both
-        # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
-        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+  fail-fast: false
+  matrix:
+    # Override automatic language detection by changing the list below.
+    # Supported options are listed in a comment in the default workflow.
+    language: ['go', 'javascript']
 
     steps:
     - name: Checkout repository
